@@ -1,0 +1,35 @@
+
+<%= form_with model: @user, local: true do |f| %>
+
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br><br>
+
+  <%= f.label :email %>
+  <br>
+  <%= f.text_field :email %>
+  <br><br>
+
+  <%= f.label :membership %>
+  <br>
+  <%= f.text_field :membership %>
+  <br><br>
+
+  <%= f.label :phone %>
+  <br>
+  <%= f.text_field :phone %>
+  <br><br>
+
+  <%= f.label :car_reg %>
+  <br>
+  <%= f.text_field :car_reg %>
+  <br><br>
+
+  
+  
+
+  <%= f.submit %>
+
+
+<% end %>

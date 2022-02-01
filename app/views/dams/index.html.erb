@@ -1,0 +1,12 @@
+<h3>Dams</h3>
+
+<%= link_to 'Add Dam', new_dam_path %>
+
+<ul>
+<% @dams.each do |dam| %>
+    <li>
+        <%= link_to dam.name, dam_path(dam.id) %>
+    </li>
+    <% end %>
+</ul>
+

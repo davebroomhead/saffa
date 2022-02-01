@@ -1,0 +1,30 @@
+<h3> <%= @user.name %> </h3>
+
+<%= link_to 'Edit', edit_user_path(@user) %>
+|
+<%= link_to 'Delete', user_path(@user), method: 'delete' %>
+
+<p>
+    Email: <%= @user.email %>
+</p>
+
+<p>
+    Membership: <%= @user.membership %>
+</p>
+
+<p>
+    Phone: <%= @user.phone %>
+</p>
+
+<p>
+    Car Rego: <%= @user.car_reg %>
+</p>
+
+<ul>
+<% @user.bookings.each do |booking| %>
+        <li>
+            <%= link_to booking.dam.name, dam_path(booking.dam.id) %>, <%= booking.date_time %>
+        </li>
+    <% end %>
+    </ul>
+

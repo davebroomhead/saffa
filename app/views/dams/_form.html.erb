@@ -1,0 +1,43 @@
+
+<%= form_with model: @dam, local: true do |f| %>
+
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br><br>
+
+  <%= f.label :location %>
+  <br>
+  <%= f.text_field :location %>
+  <br><br>
+
+  <%= f.label :description %>
+  <br>
+  <%= f.text_field :description %>
+  <br><br>
+
+  <%= f.label :health %>
+  <br>
+  <%= f.text_field :health %>
+  <br><br>
+
+  <%= f.label :status %>
+  <br>
+  <%= f.text_field :status %>
+  <br><br>
+
+  <%= f.label :owner %>
+  <br>
+  <%= f.text_field :owner %>
+  <br><br>
+
+  <%= f.label :photo, 'Photo URL' %>
+  <br>
+  <%= f.text_field :photo %>
+  <br><br>
+
+
+  <%= f.submit %>
+
+
+<% end %>

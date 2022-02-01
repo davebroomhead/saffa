@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-print "Creating dams......."
+puts "Creating dams......."
 
 Dam.destroy_all
 
@@ -38,44 +38,47 @@ d3 = Dam.create!(
     owner: 'Michael'
 ) 
 
-print "created #{ Dam.count } dams."
+puts "created #{ Dam.count } dams."
 
 ##########################################################################
 
-print "Creating users"
+puts "Creating users"
 
 User.destroy_all
 
 u1 = User.create!(
     name: 'Hamish Fork',
     email: 'hamish@hotmail.com',
-    password_digest: '',
+    password: 'chicken',
     membership: 'Premium',
     phone: '0412345678',
     car_reg: 'S566AHN',
+    admin: false,
 )
-u3 = User.create!(
+u2 = User.create!(
     name: 'Peter Mullet',
     email: 'peter@hotmail.com',
-    password_digest: '',
+    password: 'chicken',
     membership: 'Basic',
     phone: '0422776555',
     car_reg: 'S988AYE',
+    admin: false,
 )
 u3 = User.create!(
     name: 'Andrew Hoffer',
     email: 'andy@hotmail.com',
-    password_digest: '',
-    membership: 'basic',
+    password: 'chicken',
+    membership: 'Membership Officer',
     phone: '0499888423',
     car_reg: 'S753ASK',
+    admin: true
 )
 
-print "Done. Created #{User.count} users."
+puts "Done. Created #{User.count} users."
 
 ########################################################################
 
-print "Creating Bookings...."
+puts "Creating Bookings...."
 
 Booking.destroy_all
 
@@ -92,6 +95,16 @@ b3 = Booking.create!(
     car_reg: 'S566AHN'
 )
 
-print "Done. Created #{Booking.count} users."
+puts "Done. Created #{Booking.count} users."
 
 ##########################################################
+d1.bookings << b1
+u1.bookings << b1
+
+d2.bookings << b2 << b3
+u2.bookings << b2 << b3
+
+
+puts "User associated booking: #{User.second.name} has #{User.second.bookings.pluck(:date_time).join('---')}."
+
+puts "Dam associated booking: #{Dam.second.name} has #{Dam.second.bookings.pluck(:date_time).join('---')}."

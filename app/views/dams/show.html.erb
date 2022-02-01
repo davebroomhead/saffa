@@ -1,0 +1,50 @@
+<h3><%= @dam.name %></h3>
+
+<%= link_to 'Edit', edit_dam_path(@dam) %>
+|
+<%= link_to 'Delete', dam_path(@dam), method: 'delete' %>
+|
+<%= link_to 'Book this dam', new_booking_path(dam_id: @dam.id) %>
+
+<p>
+    Location: <%= @dam.location %>
+</p>
+        
+<p>
+    Description: <%= @dam.description %>
+</p>
+
+<p>
+    Health: <%= @dam.health %>
+</p>
+
+<p>
+    Status: <%= @dam.status %>
+</p>
+
+<p>
+    Owner: <%= @dam.owner %>
+</p>
+
+<% if @dam.photo.present? %>
+  <%= image_tag @dam.photo, alt: @dam.name, class: 'photo' %>
+<% end %>
+
+<h4>Bookings at this dam:</h4>
+<% @dam.bookings.each do |booking| %>
+    <li>
+        <%= link_to booking.user.name, user_path(booking.user.id) %>
+        <%= link_to booking.date_time.strftime("%H:%M %P on %A %d %B %Y"), booking_path(booking.id) %>
+    </li>
+<% end %>
+
+<iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBtjHwEeM4MODih4Sx72XHzDTafAyah7pA
+    &center=<%=@dam.location%>&zoom=15&maptype=satellite">
+</iframe>
+

@@ -1,0 +1,30 @@
+<h3>Bookings Index</h3>
+
+ <%= link_to 'Add Booking', new_booking_path %>
+
+<h4>My Bookings</h4>
+    <ul>
+    <% @bookings.each do |booking| %>
+        <li>
+            <% if @current_user.present? && booking.user_id == @current_user.id %>
+                <%= link_to booking.date_time.strftime("%H:%M %P on %A %d %B %Y"), booking_path(booking.id) %>
+                (<%= link_to 'Edit', edit_booking_path(booking.id) %>)
+            <% end %> <%# if %>
+        </li>
+        <% end %> <%# bookings.each %>
+    </ul>
+
+
+
+<% if @current_user.present? && @current_user.admin == true %>
+    <h4>All Bookings</h4>
+    <ul>
+    <% @bookings.each do |booking| %>
+        <li>
+            <%= link_to booking.date_time.strftime("%H:%M %P on %A %d %B %Y"), booking_path(booking.id) %>
+            (<%= link_to 'Edit', edit_booking_path(booking.id) %>)
+        </li>
+        <% end %> <%# bookings.each %>
+    </ul>
+<% end %> <%# if current_user == admin %>  
+

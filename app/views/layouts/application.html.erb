@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Saffa</title>
+    <title>SAFFA</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,39 @@
   </head>
 
   <body>
+
+  <header>
+    <nav>
+      <h1>Dam Booking System</h1>
+
+      <% if @current_user.present? %>
+        Welcome, <%= @current_user.name %>
+        |
+        <%= link_to 'Logout', login_path, method: 'delete' %>
+        |
+        <%= link_to 'Dams Index', dams_path %>
+        |
+        <%= link_to 'Users Index', users_path %>
+        |
+        <%= link_to 'Bookings Index', bookings_path %>
+      
+      <% else %>
+
+        <%= link_to 'Login', login_path %>
+        |
+        <%= link_to 'Sign Up', '/does-not-exist-yet' %>
+        
+      <% end %>
+  
+
+    </nav>
+  </header>
+
     <%= yield %>
+
+    <footer>
+      <hr>
+      &copy; SAFFA 2022
+    </footer>
   </body>
 </html>

@@ -1,0 +1,50 @@
+
+<% if @booking.errors.any? %>
+<ul>
+  <% @booking.errors.full_messages.each do |e| %>
+    <li>
+      <%= e %>
+    </li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= form_with model: @booking, local: true do |f| %>
+
+  <%= f.hidden_field :dam_id, value: params[:dam_id] %>
+  
+  <% if params[:dam_id] != nil %> 
+    <p>
+      <% @dam = Dam.find_by params[:dam_id] %>
+      <%= @dam.name %>
+    </p>
+
+  <% else %>
+    <%= f.select :dam do %>
+      <% @dams.each do |dam| %>
+        <%= content_tag(:option, dam.name, value: dam.id) %>
+      <% end %> <%# Dam.all do %>
+    <% end %> <%# f.select :dam do %>
+  <% end %> <%# if else %>
+
+    
+     
+
+    
+  <br><br>
+
+  <%= f.label :date_time %>
+  <br>
+  <%= f.datetime_local_field :date_time %>
+  <br><br>
+
+  <%= f.label :car_reg %>
+  <br>
+  <%= f.text_field :car_reg %>
+  <br><br>
+
+
+  <%= f.submit %>
+
+
+<% end %>
