@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :check_if_logged_in
-  
+
   def new
     @user = User.new
   end
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :email, :membership, :phone, :car_reg)
+    params.require(:user).permit(:name, :email, :membership, :phone, :car_reg, :password)
   end
 
 

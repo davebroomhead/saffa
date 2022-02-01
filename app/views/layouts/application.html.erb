@@ -16,7 +16,7 @@
       <h1>Dam Booking System</h1>
 
       <% if @current_user.present? %>
-        Welcome, <%= @current_user.name %>
+        Welcome, <%= @current_user.name %> (<%= @current_user.admin ? "admin" : "basic user" %>)
         |
         <%= link_to 'Logout', login_path, method: 'delete' %>
         |

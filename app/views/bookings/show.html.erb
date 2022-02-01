@@ -17,9 +17,19 @@
 </p>
 
 <p>
-    Date and time: <%= @booking.date_time %>
+    Date and time: <%= @booking.date_time.strftime("%l:%M%P on %a %-d %b %Y") %>
 </p>
 
 <p>
     Car rego: <%= @booking.car_reg %>
 </p>
+
+<iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtjHwEeM4MODih4Sx72XHzDTafAyah7pA
+    &q=<%=@booking.dam.location%>&zoom=15&maptype=satellite">
+</iframe>

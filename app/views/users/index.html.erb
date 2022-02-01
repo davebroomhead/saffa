@@ -1,6 +1,8 @@
 <h3>Users Index</h3>
 
-<%= link_to 'Add User', new_user_path %>
+<% if @current_user.present? && @current_user.admin == true %>
+    <%= link_to 'Add User', new_user_path %>
+<% end %>
 
 <ul>
     <% @users.each do |user| %>

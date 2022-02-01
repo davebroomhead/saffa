@@ -3,18 +3,25 @@ class BookingsController < ApplicationController
   before_action :check_if_logged_in
 
   def new
+    @users = User.all
     @dams = Dam.all
     @booking = Booking.new
+    @user_select = User.all.pluck(:name, :id)
+
+    if @booking.persisted?
+      redirect_to booking_path(@booking)
+    else
+      render :new
+    end
   end # new
 
   def create
     @dams = Dam.all
     @booking = Booking.create booking_params
-    @booking.user_id = @current_user.id
     @booking.save
 
     if @booking.persisted?
-      redirect_to bookings_path
+      redirect_to booking_path(@booking)
     else
       render :new
     end # if booking.persisted
@@ -29,25 +36,26 @@ class BookingsController < ApplicationController
   end # show
 
   def edit
+    @users = User.all
+    @dams = Dam.all
     @booking = Booking.find params[:id]
-    redirect_to login_path unless @mixtape.user_id == current_user.id
+    @user_select = User.all.pluck(:name, :id)
+    redirect_to bookings_path unless @current_user.admin == true || @booking.user_id == @current_user.id
   end # edit
 
   def update
     @booking = Booking.find params[:id]
     
-    if @booking.user_id != @current_user.id
-      redirect_to login_path
+    if @current_user.admin == false && @booking.user_id != @current_user.id
+      redirect_to bookings_path
       return
     end # booking user_id
 
-    @booking.update booking_params
-
-    if @booking.updated?
+    if @booking.update booking_params
       redirect_to booking_path(@booking)
     else
       render :edit
-    end # if booking updated
+    end # if-else booking updated
 
   end # update
 
@@ -58,7 +66,7 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(:date_time, :car_reg, :dam_id)
+    params.require(:booking).permit(:date_time, :car_reg, :dam_id, :user_id)
   end # booking_params
 
 end # class Bookings

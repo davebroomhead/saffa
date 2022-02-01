@@ -6,10 +6,12 @@
 |
 <%= link_to 'Book this dam', new_booking_path(dam_id: @dam.id) %>
 
+
+
 <p>
-    Location: <%= @dam.location %>
+    Location: <a href="https://www.google.com/maps/search/?api=1&zoom=15&basemap=satellite&query=<%=@dam.location.sub(", ","%2C%20")%>"><%= @dam.location %></a>
 </p>
-        
+
 <p>
     Description: <%= @dam.description %>
 </p>
@@ -34,9 +36,11 @@
 <% @dam.bookings.each do |booking| %>
     <li>
         <%= link_to booking.user.name, user_path(booking.user.id) %>
-        <%= link_to booking.date_time.strftime("%H:%M %P on %A %d %B %Y"), booking_path(booking.id) %>
+        <%= link_to booking.date_time.strftime("%H:%M %P on %a %d %b %Y"), booking_path(booking.id) %>
     </li>
 <% end %>
+
+<br><br>
 
 <iframe
   width="600"
@@ -44,7 +48,7 @@
   style="border:0"
   loading="lazy"
   allowfullscreen
-  src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBtjHwEeM4MODih4Sx72XHzDTafAyah7pA
-    &center=<%=@dam.location%>&zoom=15&maptype=satellite">
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtjHwEeM4MODih4Sx72XHzDTafAyah7pA
+    &q=<%=@dam.location%>&zoom=15&maptype=satellite">
 </iframe>
 

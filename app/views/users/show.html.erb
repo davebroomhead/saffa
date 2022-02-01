@@ -1,8 +1,10 @@
 <h3> <%= @user.name %> </h3>
 
-<%= link_to 'Edit', edit_user_path(@user) %>
-|
-<%= link_to 'Delete', user_path(@user), method: 'delete' %>
+<% if @current_user.id == @user.id || @current_user.admin == true %>
+    <%= link_to 'Edit', edit_user_path(@user) %>
+    |
+    <%= link_to 'Delete', user_path(@user), method: 'delete' %>
+<% end %>
 
 <p>
     Email: <%= @user.email %>
@@ -16,15 +18,19 @@
     Phone: <%= @user.phone %>
 </p>
 
-<p>
-    Car Rego: <%= @user.car_reg %>
-</p>
 
-<ul>
-<% @user.bookings.each do |booking| %>
-        <li>
-            <%= link_to booking.dam.name, dam_path(booking.dam.id) %>, <%= booking.date_time %>
-        </li>
-    <% end %>
-    </ul>
+<% if @current_user.admin == true || @current_user.id == @user.id %>
 
+    <p>
+        Car Rego: <%= @user.car_reg %>
+    </p>
+
+    <ul>
+    <% @user.bookings.each do |booking| %>
+            <li>
+                <%= link_to "#{booking.dam.name} - #{booking.date_time.strftime("%l:%M%P on %a %-d %b %Y")}", booking_path(booking.id) %>
+            </li>
+        <% end %>
+        </ul>
+
+<% end %>

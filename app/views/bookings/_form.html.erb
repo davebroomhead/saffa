@@ -9,36 +9,47 @@
 </ul>
 <% end %>
 
+
 <%= form_with model: @booking, local: true do |f| %>
 
   <%= f.hidden_field :dam_id, value: params[:dam_id] %>
-  
+  <br>
+
+    <% if @current_user.admin == true %>
+      <%= f.label :user_id, 'Booking for' %>
+      <%= f.select :user_id, @user_select, :prompt => "Select User" %>
+    <% else %>
+      <%= f.hidden_field :user_id, value: @current_user.id %>
+    <% end %> <%# if-else %>
+
+  <br><br>
+
+
+  <%= f.label :dam %>
+  <br>
   <% if params[:dam_id] != nil %> 
     <p>
-      <% @dam = Dam.find_by params[:dam_id] %>
+      <% @dam = Dam.find params[:dam_id] %>
       <%= @dam.name %>
     </p>
 
   <% else %>
-    <%= f.select :dam do %>
+    <%= f.select :dam_id do %>
       <% @dams.each do |dam| %>
         <%= content_tag(:option, dam.name, value: dam.id) %>
       <% end %> <%# Dam.all do %>
     <% end %> <%# f.select :dam do %>
   <% end %> <%# if else %>
 
-    
-     
 
-    
   <br><br>
 
-  <%= f.label :date_time %>
+  <%= f.label :date_time, 'Date and time' %>
   <br>
   <%= f.datetime_local_field :date_time %>
   <br><br>
 
-  <%= f.label :car_reg %>
+  <%= f.label :car_reg, 'Car Registration' %>
   <br>
   <%= f.text_field :car_reg %>
   <br><br>
