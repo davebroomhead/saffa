@@ -1,5 +1,5 @@
 
-<%= form_with model: @dam, local: true do |f| %>
+<%= form_with model: @dam, local: true, html: { multipar: true } do |f| %>
 
   <%= f.label :name %>
   <br>
@@ -33,8 +33,9 @@
 
   <%= f.label :photo, 'Photo URL' %>
   <br>
-  <%= f.text_field :photo %>
-  <br><br>
+  <%= f.file_field :photo %>
+  <br>
+  <br>
 
 
   <%= f.submit %>

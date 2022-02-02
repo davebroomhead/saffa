@@ -29,7 +29,7 @@
 </p>
 
 <% if @dam.photo.present? %>
-  <%= image_tag @dam.photo, alt: @dam.name, class: 'photo' %>
+  <%= cl_image_tag @dam.photo, alt: @dam.name, class: 'photo', width: '400px' %>
 <% end %>
 
 <h4>Bookings at this dam:</h4>
