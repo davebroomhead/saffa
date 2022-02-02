@@ -15,35 +15,91 @@
  */
 
  body {
-     margin: 0;
+    margin: 120px 0 0 0;
+    padding: 0;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 145%;
  }
 
  header {
-     height: 120px;
-     width: 100%;
-     background-color: #47594C;
-     color: #ffffff;
-     position: fixed;
-     margin: 0;
-     top: 0;
-}
-
-nav {
+    height: 120px;
     width: 100%;
-    display:flex;
+    background-color: #47594C;
+    color: #ffffff;
+    position: absolute;
+    margin: 0;
+    top: 0;
 }
 
-.nav_left {
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav_right {
-    text-align: right;
-}
-
-nav > div > div > a {
-    color: white;
+header a {
+    color: #ffffff;
     text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.main-nav li {
+    color: #ffffff;
+    padding: .5em 1em;
+    display: block;
+}
+
+.push {
+    margin-left: auto;
+}
+
+.hero-image {
+    width:100%;
+    object-fit: cover;
+}
+
+h1.hero {
+    font-family: grueber,serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    text-align:center;
+    line-height: 140%;
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform:translate(-50%,-35%)
+}
+
+#book-dam-button {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    background-color:#CC666B;
+    border:0;
+    border-radius: 8px;
+    width:200px;
+    height: 46px;
+    margin-top:20px;
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+}
+
+.top-logo {
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    left: 50%;
+    transform:translateX(-50%);
+    top: 32px;
 }
