@@ -48,8 +48,5 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-gem 'bootstrap'
-gem 'jquery-rails'
-
 gem 'pry-rails'
 gem 'cloudinary'
