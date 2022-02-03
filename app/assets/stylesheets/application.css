@@ -200,6 +200,11 @@ h1.hero {
     height: 900px;
 }
 
+h5 {
+    font-size: 18px;
+    line-height: 50%;
+}
+
 #dashboard-items-container {
     display: flex;
     flex: 1 1 0px;
@@ -211,7 +216,7 @@ h1.hero {
     border-radius: 30px;
     flex-grow: 1;
     margin: 20px;
-    padding: 20px;
+    padding: 5px 20px 20px 30px;
     color:white;
 }
 

@@ -7,17 +7,17 @@ class DamsController < ApplicationController
   end
 
   def create
-    @dam = Dam.new dam_params
+    dam = Dam.new dam_params
     
     if params[:dam][:photo].present?
       # forward image to Cloudinary using gem
       response = Cloudinary::Uploader.upload params[:dam][:photo]
       # p response
       raise 'hell'
-      @dam.photo = response['public_id']
+      dam.photo = response['public_id']
     end # upload check
     
-    @dam.save
+    dam.save
     
     redirect_to dams_path # back to index
   end # create

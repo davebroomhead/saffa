@@ -29916,3 +29916,1404 @@ Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.6ms)
   ↳ db/seeds.rb:110
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "bookings"."date_time" FROM "bookings" WHERE "bookings"."dam_id" = $1[0m  [["dam_id", 67]]
   ↳ db/seeds.rb:110
+Started GET "/" for ::1 at 2022-02-03 19:49:56 +1100
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dbh/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (358.6ms)
+Completed 200 OK in 433ms (Views: 426.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-02-03 19:49:59 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2022-02-03 19:50:03 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EaaVOHnMpZOszTcUH0pGq3PQNr3Mj/xEp7pRggMraS5n9qJRVaakQmJwtkUwwkxcIdmzSwC6GZmPjveVRxQhvw==", "email"=>"andy@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "andy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 254ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:50:03 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (4.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (14.9ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 58ms (Views: 23.9ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/" for ::1 at 2022-02-03 19:50:23 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-02-03 19:50:25 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2022-02-03 19:50:26 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UpghjySyQoWAO+1GEmLAcbQNTzha5eyc4XQ1e995Yld2v7ukFJ5ybOVYnQrAmZ62/bZBQjBQXYCLP5cNVf+oNw==", "email"=>"andy@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "andy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 223ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:50:27 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.2ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:51:54 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 44ms (Views: 37.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:51:59 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:52:03 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:52:29 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:52:30 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:52:35 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:53:08 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:53:19 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:53:25 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:53:53 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.2ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookings" for ::1 at 2022-02-03 19:54:06 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bookings/new" for ::1 at 2022-02-03 19:54:10 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (10.6ms)
+  Rendered bookings/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 19:54:31 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ydndR01Q/KOrqXGlKbHZe0+AmX9P0OGcE7/+76yTjSzt/kdsfXzMSs7KAen7Soe8BjuXBSVlUIB59FyZJhVHTA==", "booking"=>{"dam_id"=>"67", "user_id"=>"65", "date_time"=>"2022-02-05T07:00", "car_reg"=>"S888AAA"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (40.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  [1m[36mBooking Create (9.4ms)[0m  [1m[32mINSERT INTO "bookings" ("date_time", "car_reg", "created_at", "updated_at", "dam_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date_time", "2022-02-05 07:00:00"], ["car_reg", "S888AAA"], ["created_at", "2022-02-03 08:54:31.156876"], ["updated_at", "2022-02-03 08:54:31.156876"], ["dam_id", 67], ["user_id", 65]]
+  ↳ app/controllers/bookings_controller.rb:20
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:21
+Redirected to http://localhost:3000/bookings/77
+Completed 302 Found in 60ms (ActiveRecord: 53.3ms)
+
+
+Started GET "/bookings/77" for ::1 at 2022-02-03 19:54:31 +1100
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:35
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/views/bookings/show.html.erb:9
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT  "dams".* FROM "dams" WHERE "dams"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/views/bookings/show.html.erb:13
+  Rendered bookings/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:54:40 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/login" for ::1 at 2022-02-03 19:54:54 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p89C+mh753rUqO+7ghIxc35rK2/0c9AHkojlY4ZoMNOD6NjRWFfXk7HLn/dQ6W+0N9AlFZ7GYRv4w0cVDO76sw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2022-02-03 19:54:54 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-02-03 19:54:57 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2022-02-03 19:55:14 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l92UOepOvm6d+GxIBm8dwUzrbvUVroWhjasNP/T8Y1Wz+g4S2mKOh/ibHATUlEMGBVBgj38bNL3n4K9JfnqpNQ==", "email"=>"hamish@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hamish@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 257ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:55:14 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.2ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/63" for ::1 at 2022-02-03 19:55:19 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"63"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 63]]
+  ↳ app/views/users/show.html.erb:29
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT  "dams".* FROM "dams" WHERE "dams"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:31
+  Rendered users/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for ::1 at 2022-02-03 19:55:23 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/64" for ::1 at 2022-02-03 19:55:25 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2022-02-03 19:55:27 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 13.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/65" for ::1 at 2022-02-03 19:55:27 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2022-02-03 19:55:29 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  Rendered users/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 19:55:30 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:10
+  Rendered dams/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookings" for ::1 at 2022-02-03 19:55:36 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2022-02-03 19:55:38 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 19:55:40 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:10
+  Rendered dams/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:55:41 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 19:55:43 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:10
+  Rendered dams/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 19:56:07 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:8
+  Rendered dams/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2022-02-03 19:56:17 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:10
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/bookings" for ::1 at 2022-02-03 19:56:33 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/login" for ::1 at 2022-02-03 19:56:38 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"twNveNPrs7uOvKQEX7ZKDmQ3/X07rXJUEikpkqMKFw6TJPVT48eDUuvf1EiNTRTJLYzzB1EYw0h4YovkKYzdbg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2022-02-03 19:56:38 +1100
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2022-02-03 19:56:40 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2022-02-03 19:56:43 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V7I/6Q0Q9TOlP3JnL5LpX7AQBGe9F89XIr0KXB0rVXdzlaXCPTzF2sBcAiv9abeY+asKHdeifktI9qgql62fFw==", "email"=>"andy@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "andy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 221ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:56:43 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.2ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 19:56:47 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:8
+  Rendered dams/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2022-02-03 19:56:48 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bookings" for ::1 at 2022-02-03 19:56:49 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2022-02-03 19:56:51 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 19:56:51 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:8
+  Rendered dams/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard" for ::1 at 2022-02-03 19:56:52 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 14.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 19:57:02 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:8
+  Rendered dams/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dams/new" for ::1 at 2022-02-03 19:57:04 +1100
+Processing by DamsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/new.html.erb within layouts/application
+  Rendered dams/_form.html.erb (165.8ms)
+  Rendered dams/new.html.erb within layouts/application (167.7ms)
+Completed 200 OK in 181ms (Views: 178.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2022-02-03 19:57:07 +1100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:8
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookings" for ::1 at 2022-02-03 19:57:10 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookings/new" for ::1 at 2022-02-03 19:58:50 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.5ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (16.8ms)
+  Rendered bookings/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 85ms (Views: 33.8ms | ActiveRecord: 18.4ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 19:58:59 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HYvIBa+r/Jb6jDHqjBFku2TLpvE74TvW/CXlSYkLG785rFIun4fMf5/vQaZe6jp8LXCoi1FUisqWbkc/A43R3w==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"2022-02-03T19:58", "car_reg"=>"S888AAA"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  [1m[35m (2.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:21
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (5.9ms)
+  Rendered bookings/new.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 6.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 
+    18:     <% if @current_user.admin == true %>
+    19:       <%= f.label :user_id, 'Booking for' %>
+    20:       <%= f.select :user_id, @user_select, :prompt => "Select User" %>
+    21:     <% else %>
+    22:       <%= f.hidden_field :user_id, value: @current_user.id %>
+    23:     <% end %> <%# if-else %>
+  
+app/views/bookings/_form.html.erb:20:in `block in _app_views_bookings__form_html_erb___1560169055942329591_72960'
+app/views/bookings/_form.html.erb:13:in `_app_views_bookings__form_html_erb___1560169055942329591_72960'
+app/views/bookings/new.html.erb:3:in `_app_views_bookings_new_html_erb__4371530073369205834_72940'
+app/controllers/bookings_controller.rb:26:in `create'
+Started GET "/rails/info/routes" for 127.0.0.1 at 2022-02-03 20:11:06 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/dbh/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/dbh/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (14.5ms)
+  Rendered /Users/dbh/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered /Users/dbh/.rvm/gems/ruby-2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 20:12:58 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.7ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:8
+  Rendered dams/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 115ms (Views: 36.4ms | ActiveRecord: 45.9ms)
+
+
+Started GET "/bookings" for ::1 at 2022-02-03 20:13:00 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 31ms (Views: 19.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:13:02 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (5.1ms)
+  Rendered bookings/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 20:13:04 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ao1JVvyrBrRqqnpmKLERrBEVYdgGJ53f4KQexU98AshOqtN9zIc2XQ/JCir6Sk9rWK5vomySLMOK77yzxfrIqA==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  [1m[35m (5.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:21
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (5.2ms)
+  Rendered bookings/edit.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 6.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 
+    18:     <% if @current_user.admin == true %>
+    19:       <%= f.label :user_id, 'Booking for' %>
+    20:       <%= f.select :user_id, @user_select, :prompt => "Select User" %>
+    21:     <% else %>
+    22:       <%= f.hidden_field :user_id, value: @current_user.id %>
+    23:     <% end %> <%# if-else %>
+  
+app/views/bookings/_form.html.erb:20:in `block in _app_views_bookings__form_html_erb___1560169055942329591_82260'
+app/views/bookings/_form.html.erb:13:in `_app_views_bookings__form_html_erb___1560169055942329591_82260'
+app/views/bookings/edit.html.erb:3:in `_app_views_bookings_edit_html_erb___4561767836433174890_82240'
+app/controllers/bookings_controller.rb:26:in `create'
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:13:12 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (3.3ms)
+  Rendered bookings/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:13:37 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (16.7ms)
+  Rendered bookings/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 60ms (Views: 23.8ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:13:37 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (3.3ms)
+  Rendered bookings/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 20:13:39 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KMFx5tCGqHNJgy7kaYWLFJ3GoTraaYaTYkrPotfSW4AM5uvN4KqYmizgXqi7ftXT1H2vQLDcN48IAW3UXVSR4A==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (2.8ms)
+  Rendered bookings/edit.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 
+    18:     <% if @current_user.admin == true %>
+    19:       <%= f.label :user_id, 'Booking for' %>
+    20:       <%= f.select :user_id, @user_select, :prompt => "Select User" %>
+    21:     <% else %>
+    22:       <%= f.hidden_field :user_id, value: @current_user.id %>
+    23:     <% end %> <%# if-else %>
+  
+app/views/bookings/_form.html.erb:20:in `block in _app_views_bookings__form_html_erb___1560169055942329591_87360'
+app/views/bookings/_form.html.erb:13:in `_app_views_bookings__form_html_erb___1560169055942329591_87360'
+app/views/bookings/edit.html.erb:3:in `_app_views_bookings_edit_html_erb___4561767836433174890_87340'
+app/controllers/bookings_controller.rb:27:in `create'
+Started POST "/bookings" for ::1 at 2022-02-03 20:15:05 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KMFx5tCGqHNJgy7kaYWLFJ3GoTraaYaTYkrPotfSW4AM5uvN4KqYmizgXqi7ftXT1H2vQLDcN48IAW3UXVSR4A==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:20
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (2.9ms)
+  Rendered bookings/edit.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 14.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 
+    18:     <% if @current_user.admin == true %>
+    19:       <%= f.label :user_id, 'Booking for' %>
+    20:       <%= f.select :user_id, @user_select, :prompt => "Select User" %>
+    21:     <% else %>
+    22:       <%= f.hidden_field :user_id, value: @current_user.id %>
+    23:     <% end %> <%# if-else %>
+  
+app/views/bookings/_form.html.erb:20:in `block in _app_views_bookings__form_html_erb___1560169055942329591_92080'
+app/views/bookings/_form.html.erb:13:in `_app_views_bookings__form_html_erb___1560169055942329591_92080'
+app/views/bookings/edit.html.erb:3:in `_app_views_bookings_edit_html_erb___4561767836433174890_92060'
+app/controllers/bookings_controller.rb:27:in `create'
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:27:07 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.6ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (17.3ms)
+  Rendered bookings/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 94ms (Views: 40.6ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:27:08 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (3.3ms)
+  Rendered bookings/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 20:27:10 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.7ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:8
+  Rendered dams/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/bookings" for ::1 at 2022-02-03 20:27:11 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:27:12 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (3.7ms)
+  Rendered bookings/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 20:27:14 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BQZ8/D8wGEwEyzG2QLDnqg4xXmyTYcnhNtwZ5v0wyy8hIebXDxwopWGoQfqSS7ltR4pQFvnUeP1cl7uQd7YBTw==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  
+app/controllers/bookings_controller.rb:22:in `create'
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:28:42 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.7ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (15.7ms)
+  Rendered bookings/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 76ms (Views: 27.6ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/dams" for ::1 at 2022-02-03 20:28:45 +1100
+Processing by DamsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering dams/index.html.erb within layouts/application
+  [1m[36mDam Load (0.9ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/dams/index.html.erb:8
+  Rendered dams/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/bookings" for ::1 at 2022-02-03 20:28:46 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:28:47 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.5ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (3.6ms)
+  Rendered bookings/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 20:28:52 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YXF7YzSyj6db2ILdD3wc6pmHuVZgk49G2lH0mXwWwS5FVuFIBJ6/Tj678pHdh0It0Dy3LAomPlqwGlbv9pALTg==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:16
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (3.1ms)
+  Rendered bookings/edit.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 
+    18:     <% if @current_user.admin == true %>
+    19:       <%= f.label :user_id, 'Booking for' %>
+    20:       <%= f.select :user_id, @user_select, :prompt => "Select User" %>
+    21:     <% else %>
+    22:       <%= f.hidden_field :user_id, value: @current_user.id %>
+    23:     <% end %> <%# if-else %>
+  
+app/views/bookings/_form.html.erb:20:in `block in _app_views_bookings__form_html_erb___1560169055942329591_102440'
+app/views/bookings/_form.html.erb:13:in `_app_views_bookings__form_html_erb___1560169055942329591_102440'
+app/views/bookings/edit.html.erb:3:in `_app_views_bookings_edit_html_erb___4561767836433174890_102420'
+app/controllers/bookings_controller.rb:22:in `create'
+Started POST "/bookings" for ::1 at 2022-02-03 20:29:17 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YXF7YzSyj6db2ILdD3wc6pmHuVZgk49G2lH0mXwWwS5FVuFIBJ6/Tj678pHdh0It0Dy3LAomPlqwGlbv9pALTg==", "booking"=>{"dam_id"=>"66", "user_id"=>"63", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:16
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (2.9ms)
+  Rendered bookings/edit.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 
+    18:     <% if @current_user.admin == true %>
+    19:       <%= f.label :user_id, 'Booking for' %>
+    20:       <%= f.select :user_id, @user_select, :prompt => "Select User" %>
+    21:     <% else %>
+    22:       <%= f.hidden_field :user_id, value: @current_user.id %>
+    23:     <% end %> <%# if-else %>
+  
+app/views/bookings/_form.html.erb:20:in `block in _app_views_bookings__form_html_erb___1560169055942329591_102980'
+app/views/bookings/_form.html.erb:13:in `_app_views_bookings__form_html_erb___1560169055942329591_102980'
+app/views/bookings/edit.html.erb:3:in `_app_views_bookings_edit_html_erb___4561767836433174890_102960'
+app/controllers/bookings_controller.rb:22:in `create'
+Started GET "/bookings" for ::1 at 2022-02-03 20:30:59 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 39ms (Views: 23.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:31:00 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (14.1ms)
+  Rendered bookings/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 35ms (Views: 28.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 20:31:02 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKHFfKLoLNyszn0nM1qrMJWHYezlpxc0xkthtJywsSmshl9XksQcNcmtDWvhofX33Dxvlo8SpiisAMPCFjZ7SQ==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  
+app/controllers/bookings_controller.rb:18:in `create'
+Started POST "/bookings" for ::1 at 2022-02-03 20:31:20 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKHFfKLoLNyszn0nM1qrMJWHYezlpxc0xkthtJywsSmshl9XksQcNcmtDWvhofX33Dxvlo8SpiisAMPCFjZ7SQ==", "booking"=>{"dam_id"=>"66", "user_id"=>"63", "date_time"=>"2022-02-05T20:31", "car_reg"=>"S888AAA"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  
+app/controllers/bookings_controller.rb:18:in `create'
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:35:41 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (17.4ms)
+  Rendered bookings/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 84ms (Views: 33.6ms | ActiveRecord: 17.8ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 20:35:44 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SeOgGnJNBjA8k2z/ZY67WZS/McO4AGGi/yrryh1m6cBtxDoxQmE22VnwHLO3deWe3QQ/udK10L6VYUm8l+AjoA==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (3.1ms)
+  Rendered bookings/edit.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: 
+    2: <% if @booking.errors.any? %>
+    3: <ul>
+    4:   <% @booking.errors.full_messages.each do |e| %>
+    5:     <li>
+  
+app/views/bookings/_form.html.erb:2:in `_app_views_bookings__form_html_erb___1560169055942329591_113160'
+app/views/bookings/edit.html.erb:3:in `_app_views_bookings_edit_html_erb___4561767836433174890_113140'
+app/controllers/bookings_controller.rb:22:in `create'
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:36:04 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (12.8ms)
+  Rendered bookings/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 68ms (Views: 25.8ms | ActiveRecord: 15.1ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 20:36:05 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D0yFiadeVRYT87xBJ9YsW4YCFrR2fAArqev3KJvg5TIrax+il3Jl/3aQzA31LXKcz7kYzhzJsTfDoFVeEWYvUg==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (3.2ms)
+  Rendered bookings/edit.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 
+    18:     <% if @current_user.admin == true %>
+    19:       <%= f.label :user_id, 'Booking for' %>
+    20:       <%= f.select :user_id, @user_select, :prompt => "Select User" %>
+    21:     <% else %>
+    22:       <%= f.hidden_field :user_id, value: @current_user.id %>
+    23:     <% end %> <%# if-else %>
+  
+app/views/bookings/_form.html.erb:20:in `block in _app_views_bookings__form_html_erb___1560169055942329591_117980'
+app/views/bookings/_form.html.erb:13:in `_app_views_bookings__form_html_erb___1560169055942329591_117980'
+app/views/bookings/edit.html.erb:3:in `_app_views_bookings_edit_html_erb___4561767836433174890_117960'
+app/controllers/bookings_controller.rb:22:in `create'
+Started GET "/bookings/new" for ::1 at 2022-02-03 20:42:06 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (1.2ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (17.4ms)
+  Rendered bookings/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 99ms (Views: 41.2ms | ActiveRecord: 20.8ms)
+
+
+Started POST "/bookings" for ::1 at 2022-02-03 20:42:10 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R9IXonb6QgB5UbDyB932MUJuvEkjSIzWguONTqsjaMVj9Y2JRtZy6RwywL7VJqj2C9WyM0n9PcroqC84IaWipQ==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:15
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (3.6ms)
+  Rendered bookings/new.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 
+    18:     <% if @current_user.admin == true %>
+    19:       <%= f.label :user_id, 'Booking for' %>
+    20:       <%= f.select :user_id, @user_select, :prompt => "Select User" %>
+    21:     <% else %>
+    22:       <%= f.hidden_field :user_id, value: @current_user.id %>
+    23:     <% end %> <%# if-else %>
+  
+app/views/bookings/_form.html.erb:20:in `block in _app_views_bookings__form_html_erb___1560169055942329591_122900'
+app/views/bookings/_form.html.erb:13:in `_app_views_bookings__form_html_erb___1560169055942329591_122900'
+app/views/bookings/new.html.erb:4:in `_app_views_bookings_new_html_erb__4371530073369205834_122880'
+app/controllers/bookings_controller.rb:20:in `create'
+Started GET "/" for 127.0.0.1 at 2022-02-04 09:18:34 +1100
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dbh/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (421.7ms)
+Completed 200 OK in 453ms (Views: 447.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-02-04 09:18:39 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-02-04 09:18:45 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0nJsxy+MMcqgkvP3ZEPyAfZ4cxFxA6gZuHm2vtBuJT2iOC8iVmdKRJuojK36aT8G3PNBYD1+Z0UtPuPxV2DIkg==", "email"=>"andy@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "andy@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 270ms (ActiveRecord: 25.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2022-02-04 09:18:46 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:22
+  [1m[36mDam Load (0.5ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:32
+  Rendered pages/dashboard.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 41ms (Views: 23.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2022-02-04 09:30:55 +1100
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/bookings/index.html.erb:8
+  Rendered bookings/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 68ms (Views: 33.2ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/bookings/new" for 127.0.0.1 at 2022-02-04 09:30:57 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (1.2ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (34.9ms)
+  Rendered bookings/new.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 71ms (Views: 53.9ms | ActiveRecord: 10.3ms)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2022-02-04 09:31:00 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cREYkTkZ45DN0Vu4XjjXpAUD3WcAj/KhLRAmdMPJpUkBW1t0QPKYHvbrJOLAEhqjL4jvFkzyPf24V3M7RMdI5g==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:14
+  [1m[35m (2.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:16
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.4ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (5.9ms)
+  Rendered bookings/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 30ms (Views: 17.1ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2022-02-04 09:33:29 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdGJPH9PUxTZNT3EmtWRE6HXysmIaWSM1craNQa90FAVm8rZBqQomuIPQp4E/1wUi1z4uMQUq9BAjY96gbM9/w==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:16
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 10.9ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/bookings_controller.rb:18:in `create'
+Started PUT "/__web_console/repl_sessions/ae9b04a94d771b1c1a9f8b4617c7d918" for 127.0.0.1 at 2022-02-04 09:33:48 +1100
+Started PUT "/__web_console/repl_sessions/ae9b04a94d771b1c1a9f8b4617c7d918" for 127.0.0.1 at 2022-02-04 09:33:50 +1100
+Started POST "/bookings" for 127.0.0.1 at 2022-02-04 09:36:27 +1100
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdGJPH9PUxTZNT3EmtWRE6HXysmIaWSM1craNQa90FAVm8rZBqQomuIPQp4E/1wUi1z4uMQUq9BAjY96gbM9/w==", "booking"=>{"dam_id"=>"66", "user_id"=>"", "date_time"=>"", "car_reg"=>""}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:16
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (14.3ms)
+  Rendered bookings/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 74ms (Views: 32.8ms | ActiveRecord: 15.3ms)
+
+

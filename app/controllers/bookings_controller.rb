@@ -7,24 +7,19 @@ class BookingsController < ApplicationController
     @dams = Dam.all
     @booking = Booking.new
     @user_select = User.all.pluck(:name, :id)
-
-    if @booking.persisted?
-      redirect_to booking_path(@booking)
-    else
-      render :new
-    end
   end # new
 
   def create
     @dams = Dam.all
     @booking = Booking.create booking_params
     @booking.save
+    @user_select = User.all.pluck(:name, :id)
 
     if @booking.persisted?
       redirect_to booking_path(@booking)
     else
       render :new
-    end # if booking.persisted
+    end # if
   end # create
 
   def index

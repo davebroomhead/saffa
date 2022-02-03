@@ -5,5 +5,7 @@ class Booking < ApplicationRecord
 
     validates :date_time, presence: true
     validates :car_reg, presence: true
+    validates :user_id, presence: true
+    validates :dam_id, presence: true
 
 end
