@@ -1,5 +1,5 @@
 
-<%= form_with model: @dam, local: true, html: { multipar: true } do |f| %>
+<%= form_with(:model => @dam, :local => true, :html => { :multipart => true }) do |f| %>
 
   <%= f.label :name %>
   <br>
@@ -31,14 +31,14 @@
   <%= f.text_field :owner %>
   <br><br>
 
-  <%= f.label :photo, 'Photo URL' %>
+  <%= f.label 'Dam Photo' %>
   <br>
-  <%= f.file_field :photo %>
+  <%= f.cl_image_upload :photo %>
   <br>
   <br>
 
 
-  <%= f.submit %>
+  <%= f.submit "Edit Dam" %>
 
 
 <% end %>

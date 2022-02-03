@@ -13,6 +13,7 @@ class DamsController < ApplicationController
       # forward image to Cloudinary using gem
       response = Cloudinary::Uploader.upload params[:dam][:photo]
       # p response
+      raise 'hell'
       @dam.photo = response['public_id']
     end # upload check
     
@@ -30,13 +31,22 @@ class DamsController < ApplicationController
   end
 
   def edit
-    @dam = Dam.find params[:id]
+    @dam = Dam.find params[:id]    
   end
 
   def update
-    dam = Dam.find params[:id]
-    dam.update dam_params
-    redirect_to dam_path(params[:id])
+    dam = Dam.find(params[:id])
+
+    if params[:file].present?
+      # forward image to Cloudinary using gem
+      req = Cloudinary::Uploader.upload(params[:file])
+      p req
+      dam.photo = req["public_id"]
+    end # upload check
+    
+    dam.update_attributes(dam_params)
+    dam.save
+    redirect_to dam_path(dam)
   end
 
   def destroy
@@ -46,7 +56,7 @@ class DamsController < ApplicationController
 
   private
   def dam_params
-    params.require(:dam).permit(:name, :location, :description, :health, :status, :owner, :photo)
+    params.require(:dam).permit(:name, :location, :description, :health, :status, :owner)
   end
   
 end

@@ -6,7 +6,29 @@
 |
 <%= link_to 'Book this dam', new_booking_path(dam_id: @dam.id) %>
 
+<br><br>
 
+<div id="dam-show-flex">
+    <div class="dam-show-item" id="dam-photo">
+        <% if @dam.photo.present? %>
+            <%= cl_image_tag @dam.photo, :class => "dam-image" %>
+        <% end %>
+    </div>
+    <div class="dam-show-item" id="dam-map">
+        <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtjHwEeM4MODih4Sx72XHzDTafAyah7pA
+            &q=<%=@dam.location%>&zoom=15&maptype=satellite">
+</iframe>
+    </div>
+</div>
+
+
+<br><br>
 
 <p>
     Location: <a href="https://www.google.com/maps/search/?api=1&zoom=15&basemap=satellite&query=<%=@dam.location.sub(", ","%2C%20")%>"><%= @dam.location %></a>
@@ -28,9 +50,7 @@
     Owner: <%= @dam.owner %>
 </p>
 
-<% if @dam.photo.present? %>
-  <%= cl_image_tag @dam.photo, alt: @dam.name, class: 'photo', width: '400px' %>
-<% end %>
+<br>
 
 <h4>Bookings at this dam:</h4>
 <% @dam.bookings.each do |booking| %>
@@ -42,13 +62,5 @@
 
 <br><br>
 
-<iframe
-  width="600"
-  height="450"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtjHwEeM4MODih4Sx72XHzDTafAyah7pA
-    &q=<%=@dam.location%>&zoom=15&maptype=satellite">
-</iframe>
+
 

@@ -1,0 +1,37 @@
+<h4>Welcome <%= @current_user.name %></h4>
+
+<div id="dashboard-items-container">
+    <div class="dashboard-item" id="my-bookings">
+        <h5> <%= link_to 'My Bookings', bookings_path %> </h5>
+        <ul>
+        <% @bookings.each do |booking| %>
+                <% if @current_user.present? && booking.user_id == @current_user.id %>
+                <li>
+                    <%= link_to booking.date_time.strftime("%H:%M %P on %A %d %B %Y"), booking_path(booking.id) %>
+                    (<%= link_to 'Edit', edit_booking_path(booking.id) %>)
+                </li>
+                <% end %> <%# if %>
+            <% end %> <%# bookings.each %>
+        </ul>
+    </div>
+    <div class="dashboard-item" id="members">
+        <h5><%= link_to 'Members', users_path %></h5>
+        <ul>
+            <% @users.each do |user| %>
+            <li>
+                <%= link_to user.name, user_path(user.id) %>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+    <div class="dashboard-item" id="dams">
+        <h5><%= link_to 'Dams', dams_path %></h5>
+        <ul>
+            <% @dams.each do |dam| %>
+            <li>
+                <%= link_to dam.name, dam_path(dam.id) %>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+</div>

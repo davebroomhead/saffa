@@ -14,17 +14,19 @@
  *= require_self
  */
 
+
  body {
-    margin: 120px 0 0 0;
+    margin: 0;
     padding: 0;
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 145%;
+    background-color: #FCFCF2;
  }
 
- header {
+header {
     height: 120px;
     width: 100%;
     background-color: #47594C;
@@ -34,14 +36,24 @@
     top: 0;
 }
 
+a {
+    color: #306CC2;
+}
+
 header a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
+}
+
+header a:hover{
+    color:white;
 }
 
 .main-nav {
     display: flex;
-    margin: 0;
+    height: 120px;
+    align-items: center;
+    margin: 0 40px 0 34px;
     padding: 0;
     list-style: none;
     font-family: 'Source Sans Pro', sans-serif;
@@ -60,39 +72,64 @@ header a {
     margin-left: auto;
 }
 
-.hero-image {
-    width:100%;
-    object-fit: cover;
-}
-
 h1.hero {
     font-family: grueber,serif;
     font-weight: 400;
     font-style: normal;
     color:white;
-    text-align:center;
+    text-align: center;
     line-height: 140%;
-    position:absolute;
-    top:30%;
+    position: absolute;
+    top:40%;
     left:50%;
-    transform:translate(-50%,-35%)
+    transform: translate(-50%,-45%);
 }
 
-#book-dam-button {
+.hero-image {
+    position: absolute;
+    left: 0px;
+    top: 120px;
+    width:100%;
+}
+
+.primary-button {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-decoration: none;
+    background-color:#CC666B;
+    border: 0;
+    border-radius: 8px;
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+}
+
+.secondary-button {
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     text-decoration: none;
-    background-color:#CC666B;
-    border:0;
+    background-color:#47594C;
+    border: 1px solid white;
     border-radius: 8px;
-    width:200px;
-    height: 46px;
-    margin-top:20px;
     text-decoration: none;
     color:white;
     cursor: pointer;
+}
+
+#book-dam-button {
+    width: 200px;
+    height: 46px;
+    margin-top: 20px;
+}
+
+#join-button, #login-button {
+    width: 124px;
+    height: 42px;
 }
 
 .top-logo {
@@ -100,6 +137,102 @@ h1.hero {
     width: 155px;
     height: 155px;
     left: 50%;
-    transform:translateX(-50%);
+    transform: translateX(-50%);
     top: 32px;
+}
+
+.footer {
+    margin: 200px 0 0 0;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 145%;
+}
+
+.footer-logo{
+    width: 200px;
+    height: 200px;
+}
+
+#footer-container {
+    padding: 50px;
+    display: flex;
+    flex: 1 1 0px;
+    background-color: #47594C;
+    color: white;
+}
+
+.footer-column {
+    flex-grow: 1;
+}
+
+#copyright {
+    font-size: 12px;
+}
+
+.yield-container {
+    margin: 200px 50px 0px 50px;
+}
+
+.login-container {
+    margin-top: 50px;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 145%;
+}
+
+.login-field {
+    font-family: Source Sans Pro;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 145%;
+    width: 300px;
+    height: 34px;
+}
+
+.home-div {
+    height: 900px;
+}
+
+#dashboard-items-container {
+    display: flex;
+    flex: 1 1 0px;
+    margin-top: 20px;
+}
+
+.dashboard-item {
+    background-color: #47594C;
+    border-radius: 30px;
+    flex-grow: 1;
+    margin: 20px;
+    padding: 20px;
+    color:white;
+}
+
+.dashboard-item li {
+    list-style: none;
+}
+
+.dashboard-item a {
+    color: white;
+    text-decoration: none;
+}
+
+#dam-show-flex {
+    display: flex;
+    flex: 1 1 0px;
+}
+
+.dam-show-item {
+    flex-grow: 1;
+}
+
+.dam-image {
+    max-height: 450px;
 }

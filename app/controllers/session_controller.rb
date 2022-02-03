@@ -10,7 +10,7 @@ class SessionController < ApplicationController
 
       # successful login
       session[:user_id] = user.id
-      redirect_to root_path
+      redirect_to dashboard_path
 
     else
 
@@ -24,6 +24,6 @@ class SessionController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to login_path
+    redirect_to root_path
   end # destroy
 end # class 
