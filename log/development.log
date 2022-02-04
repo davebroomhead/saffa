@@ -31317,3 +31317,56 @@ Processing by BookingsController#create as HTML
 Completed 200 OK in 74ms (Views: 32.8ms | ActiveRecord: 15.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-02-04 12:46:25 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 117ms (Views: 44.3ms | ActiveRecord: 32.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2022-02-04 12:46:33 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:23
+  [1m[36mDam Load (1.0ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:33
+  Rendered pages/dashboard.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 64ms (Views: 39.3ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/bookings/new" for 127.0.0.1 at 2022-02-04 12:46:35 +1100
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "users"."name", "users"."id" FROM "users"[0m
+  ↳ app/controllers/bookings_controller.rb:9
+  Rendering bookings/new.html.erb within layouts/application
+  [1m[36mDam Load (0.5ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/bookings/_form.html.erb:39
+  Rendered bookings/_form.html.erb (7.4ms)
+  Rendered bookings/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 31ms (Views: 25.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2022-02-04 12:46:37 +1100
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/views/pages/dashboard.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/pages/dashboard.html.erb:23
+  [1m[36mDam Load (0.3ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ app/views/pages/dashboard.html.erb:33
+  Rendered pages/dashboard.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 1.3ms)
+
+

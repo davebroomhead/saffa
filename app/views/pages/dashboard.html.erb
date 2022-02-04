@@ -3,6 +3,7 @@
 <div id="dashboard-items-container">
     <div class="dashboard-item" id="my-bookings">
         <h5> <%= link_to 'My Bookings', bookings_path %> </h5>
+        <p><%= link_to 'Make New Booking', new_booking_path %></p>
         <ul>
         <% @bookings.each do |booking| %>
                 <% if @current_user.present? && booking.user_id == @current_user.id %>
