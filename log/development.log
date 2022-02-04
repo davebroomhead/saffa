@@ -31370,3 +31370,290 @@ Processing by PagesController#dashboard as HTML
 Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-02-04 14:15:13 +1100
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dbh/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (173.4ms)
+Completed 200 OK in 297ms (Views: 230.0ms | ActiveRecord: 19.5ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mDam Load (0.7ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (5.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDam Destroy (11.7ms)[0m  [1m[31mDELETE FROM "dams" WHERE "dams"."id" = $1[0m  [["id", 66]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDam Destroy (0.8ms)[0m  [1m[31mDELETE FROM "dams" WHERE "dams"."id" = $1[0m  [["id", 67]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDam Destroy (0.8ms)[0m  [1m[31mDELETE FROM "dams" WHERE "dams"."id" = $1[0m  [["id", 68]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mDam Create (6.2ms)[0m  [1m[32mINSERT INTO "dams" ("location", "description", "photo", "health", "status", "owner", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["location", "-34.828771, 138.813477"], ["description", "nice dam"], ["photo", "http://www.fillmurray.com/200/200"], ["health", "excellent"], ["status", "lots of fish"], ["owner", "Elvis"], ["created_at", "2022-02-04 03:17:56.434135"], ["updated_at", "2022-02-04 03:17:56.434135"], ["name", "Millbrook Reservoir"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mDam Create (0.3ms)[0m  [1m[32mINSERT INTO "dams" ("location", "description", "photo", "health", "status", "owner", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["location", "-34.868780, 138.780900"], ["description", "lovely dam"], ["photo", "http://www.fillmurray.com/200/200"], ["health", "very good"], ["status", "quite a few fish"], ["owner", "Derek"], ["created_at", "2022-02-04 03:17:56.442279"], ["updated_at", "2022-02-04 03:17:56.442279"], ["name", "Kangaroo Creek Reservoir"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mDam Create (0.2ms)[0m  [1m[32mINSERT INTO "dams" ("location", "description", "photo", "health", "status", "owner", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["location", "-34.746325, 138.727363"], ["description", "pretty good dam"], ["photo", "http://www.fillmurray.com/200/200"], ["health", "good"], ["status", "a number of fish"], ["owner", "Michael"], ["created_at", "2022-02-04 03:17:56.444120"], ["updated_at", "2022-02-04 03:17:56.444120"], ["name", "Little Para"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "dams"[0m
+  ↳ db/seeds.rb:41
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 63]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 64]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 65]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hamish@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:49
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "membership", "phone", "car_reg", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hamish Fork"], ["email", "hamish@hotmail.com"], ["password_digest", "$2a$12$hyhaaBAlFse.k2PUxmb4RudNeegA8wJmzu9PGMS5n.zmZdGylOszq"], ["membership", "Premium"], ["phone", "0412345678"], ["car_reg", "S566AHN"], ["created_at", "2022-02-04 03:17:56.693490"], ["updated_at", "2022-02-04 03:17:56.693490"], ["admin", false]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "peter@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "membership", "phone", "car_reg", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Peter Mullet"], ["email", "peter@hotmail.com"], ["password_digest", "$2a$12$EdUFAfmevd4hisgL.47DaOrG5z0yeWVyxcRlW2QpZRZ7BFYzaFRd."], ["membership", "Basic"], ["phone", "0422776555"], ["car_reg", "S988AYE"], ["created_at", "2022-02-04 03:17:56.920088"], ["updated_at", "2022-02-04 03:17:56.920088"], ["admin", false]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "andy@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:67
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "membership", "phone", "car_reg", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Andrew Hoffer"], ["email", "andy@hotmail.com"], ["password_digest", "$2a$12$cgTEoGIo.gEaMq3Fa.VAJeLAtxzQGChWuQNocTeORLQ.5tqBe8dKe"], ["membership", "Membership Officer"], ["phone", "0499888423"], ["car_reg", "S753ASK"], ["created_at", "2022-02-04 03:17:57.145793"], ["updated_at", "2022-02-04 03:17:57.145793"], ["admin", true]]
+  ↳ db/seeds.rb:67
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:77
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mBooking Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 74]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mBooking Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 75]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mBooking Destroy (0.2ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 76]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mBooking Destroy (0.3ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 77]]
+  ↳ db/seeds.rb:83
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (12.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mDam Load (0.7ms)[0m  [1m[34mSELECT "dams".* FROM "dams"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDam Destroy (0.7ms)[0m  [1m[31mDELETE FROM "dams" WHERE "dams"."id" = $1[0m  [["id", 69]]
+  ↳ db/seeds.rb:11
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDam Destroy (0.4ms)[0m  [1m[31mDELETE FROM "dams" WHERE "dams"."id" = $1[0m  [["id", 70]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mDam Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dams" WHERE "dams"."id" = $1[0m  [["id", 71]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mDam Create (1.5ms)[0m  [1m[32mINSERT INTO "dams" ("location", "description", "photo", "health", "status", "owner", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["location", "-34.828771, 138.813477"], ["description", "nice dam"], ["photo", "http://www.fillmurray.com/200/200"], ["health", "excellent"], ["status", "lots of fish"], ["owner", "Elvis"], ["created_at", "2022-02-04 03:20:12.772313"], ["updated_at", "2022-02-04 03:20:12.772313"], ["name", "Millbrook Reservoir"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mDam Create (0.8ms)[0m  [1m[32mINSERT INTO "dams" ("location", "description", "photo", "health", "status", "owner", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["location", "-34.868780, 138.780900"], ["description", "lovely dam"], ["photo", "http://www.fillmurray.com/200/200"], ["health", "very good"], ["status", "quite a few fish"], ["owner", "Derek"], ["created_at", "2022-02-04 03:20:12.776312"], ["updated_at", "2022-02-04 03:20:12.776312"], ["name", "Kangaroo Creek Reservoir"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mDam Create (0.4ms)[0m  [1m[32mINSERT INTO "dams" ("location", "description", "photo", "health", "status", "owner", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["location", "-34.746325, 138.727363"], ["description", "pretty good dam"], ["photo", "http://www.fillmurray.com/200/200"], ["health", "good"], ["status", "a number of fish"], ["owner", "Michael"], ["created_at", "2022-02-04 03:20:12.779995"], ["updated_at", "2022-02-04 03:20:12.779995"], ["name", "Little Para"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "dams"[0m
+  ↳ db/seeds.rb:41
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 66]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 67]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 68]]
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hamish@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:49
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "membership", "phone", "car_reg", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hamish Fork"], ["email", "hamish@hotmail.com"], ["password_digest", "$2a$12$Urlm0IqYg.aU2LxXOmeYU.0b1sjQPblHScyx/54YUM7E651iFisbK"], ["membership", "Premium"], ["phone", "0412345678"], ["car_reg", "S566AHN"], ["created_at", "2022-02-04 03:20:13.031792"], ["updated_at", "2022-02-04 03:20:13.031792"], ["admin", false]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "peter@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "membership", "phone", "car_reg", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Peter Mullet"], ["email", "peter@hotmail.com"], ["password_digest", "$2a$12$JKKd8tFMt9rhkc0ANHVHxO05BVOntx1iJsGyFAkPAy4UVG9sdP1OW"], ["membership", "Basic"], ["phone", "0422776555"], ["car_reg", "S988AYE"], ["created_at", "2022-02-04 03:20:13.254554"], ["updated_at", "2022-02-04 03:20:13.254554"], ["admin", false]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:67
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "andy@hotmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:67
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "membership", "phone", "car_reg", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Andrew Hoffer"], ["email", "andy@hotmail.com"], ["password_digest", "$2a$12$vrPZ686nfNZCknnS.Yxzr.P2ng9K25DSEiRmHOmNDM05u1uhD9FyK"], ["membership", "Membership Officer"], ["phone", "0499888423"], ["car_reg", "S753ASK"], ["created_at", "2022-02-04 03:20:13.477398"], ["updated_at", "2022-02-04 03:20:13.477398"], ["admin", true]]
+  ↳ db/seeds.rb:67
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:67
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:77
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:85
+  [1m[36mBooking Create (1.5ms)[0m  [1m[32mINSERT INTO "bookings" ("date_time", "car_reg", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date_time", "2021-02-03 11:00:00"], ["car_reg", "S753ASK"], ["created_at", "2022-02-04 03:20:13.494219"], ["updated_at", "2022-02-04 03:20:13.494219"]]
+  ↳ db/seeds.rb:85
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:85
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mBooking Create (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("date_time", "car_reg", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date_time", "2021-02-04 12:00:00"], ["car_reg", "S988AYE"], ["created_at", "2022-02-04 03:20:13.497168"], ["updated_at", "2022-02-04 03:20:13.497168"]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mBooking Create (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("date_time", "car_reg", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date_time", "2021-02-05 10:00:00"], ["car_reg", "S566AHN"], ["created_at", "2022-02-04 03:20:13.498640"], ["updated_at", "2022-02-04 03:20:13.498640"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bookings"[0m
+  ↳ db/seeds.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:101
+  [1m[36mBooking Update (4.1ms)[0m  [1m[33mUPDATE "bookings" SET "updated_at" = $1, "dam_id" = $2 WHERE "bookings"."id" = $3[0m  [["updated_at", "2022-02-04 03:20:13.514018"], ["dam_id", 72], ["id", 78]]
+  ↳ db/seeds.rb:101
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:101
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:102
+  [1m[36mBooking Update (0.4ms)[0m  [1m[33mUPDATE "bookings" SET "updated_at" = $1, "user_id" = $2 WHERE "bookings"."id" = $3[0m  [["updated_at", "2022-02-04 03:20:13.521456"], ["user_id", 69], ["id", 78]]
+  ↳ db/seeds.rb:102
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:102
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mBooking Update (0.5ms)[0m  [1m[33mUPDATE "bookings" SET "updated_at" = $1, "dam_id" = $2 WHERE "bookings"."id" = $3[0m  [["updated_at", "2022-02-04 03:20:13.524250"], ["dam_id", 73], ["id", 79]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mBooking Update (0.4ms)[0m  [1m[33mUPDATE "bookings" SET "updated_at" = $1, "dam_id" = $2 WHERE "bookings"."id" = $3[0m  [["updated_at", "2022-02-04 03:20:13.527276"], ["dam_id", 73], ["id", 80]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:105
+  [1m[36mBooking Update (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "updated_at" = $1, "user_id" = $2 WHERE "bookings"."id" = $3[0m  [["updated_at", "2022-02-04 03:20:13.529518"], ["user_id", 70], ["id", 79]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:105
+  [1m[36mBooking Update (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "updated_at" = $1, "user_id" = $2 WHERE "bookings"."id" = $3[0m  [["updated_at", "2022-02-04 03:20:13.531323"], ["user_id", 70], ["id", 80]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:105
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:108
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:108
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "bookings"."date_time" FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 70]]
+  ↳ db/seeds.rb:108
+  [1m[36mDam Load (0.2ms)[0m  [1m[34mSELECT  "dams".* FROM "dams" ORDER BY "dams"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:110
+  [1m[36mDam Load (0.2ms)[0m  [1m[34mSELECT  "dams".* FROM "dams" ORDER BY "dams"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ db/seeds.rb:110
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "bookings"."date_time" FROM "bookings" WHERE "bookings"."dam_id" = $1[0m  [["dam_id", 73]]
+  ↳ db/seeds.rb:110
